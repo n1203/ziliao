@@ -1,0 +1,25 @@
+<!-- 高中知识技巧列表页 
+ typeid:高中4;初中5;英语6  
+ -->
+ 织梦编辑快捷工具:http://tools.dedecms.com/dedetag_maker/system.html
+ 织梦手册:http://tools.dedecms.com/uploads/docs/dede_tpl/index.htm
+ 
+ 自定义:[field:name/]
+ 
+ 
+ 
+{dede:arclist row="20" typeid="4"}
+<li><a href="[field:typeurl/]" title="[field:fulltitle/]" >[[field:typename/]]</a><a href="[field:arcurl /]">[field:title /]</a></li>
+{/dede:arclist}
+
+
+文章内容页面:
+文章标题:{dede:field.title/}
+文章连接:{dede:field name='arcurl'/}
+文章时间:{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}
+文章来源:{dede:field.source/}
+文章作者:{dede:field.writer/}
+文章编辑:{dede:adminname/}
+文章简介:{dede:field.description}
+正文内容:{dede:field.body/}
+文章点击:{dede:field.body/}
