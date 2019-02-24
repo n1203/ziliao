@@ -1,26 +1,68 @@
-<!-- 轮播组件 -->
-<link rel="stylesheet" type="text/css" href="style/swiper.min.css"/>
-<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-    <a href="#" class="swiper-slide"><img src="images/2.png" ></a>
-    <a href="#" class="swiper-slide"><img src="images/2.png" ></a>
-    <a href="#" class="swiper-slide"><img src="images/2.png" ></a>
-  </div>
-</div>
-<style type="text/css">
-	.swiper-container{
-		border-radius: 20px;
-		overflow: hidden;
-		padding: 0;
-	}
-	.swiper-slide img{
-		width: 100%;
-		height: 100%;
-	}
-</style>
-<script>
-var mySwiper = new Swiper('.swiper-container', {
-	autoplay: true,//可选选项，自动滑动
-})
-</script>
+		{dede:include filename="head.htm"/}
+		{dede:include filename="swiper.htm"/}
+		<section class="indexList">
+			<h2>最新快手资料</h2>
+			{dede:arclist row="10" orderby="pubdate"}
+<li><a href="[field:typeurl/]" title="[field:fulltitle/]" >[[field:typename/]]</a><a href="[field:arcurl /]">[field:title /]</a></li>
+{/dede:arclist}
+				<a href="" class="indexListItem ILIEnglist"><p>英语</p><div class="p2" >0043]高考英语作文：40个高级句型，用上就能拿高</div></a>
+				<a href="" class="indexListItem ILIChinese"><p>英语</p><div class="p2" >0043]高考英语作文：40个高级句型，用上就能拿高</div></a>
+				<a href="" class="indexListItem ILIGaokao"><p>英语</p><div class="p2" >0043]高考英语作文：40个高级句型，用上就能拿高</div></a>				
+		</section>
+		<style type="text/css">
+			.indexList{
+				padding:.5rem 1rem;
+			}
+			.indexList  .indexListItem{				
+				float: left;
+				border-radius: 10px;
+				margin: .5rem auto;
+				font-size: 1.2rem;
+				color: #fff;
+				text-decoration: none;				
+			}
+			/* 高考 */
+			.ILIGaokao{
+				background: linear-gradient(#6dbdff,#488fcf);
+				box-shadow: 0px 0px 15px #6dbdff;
+			}
+			.indexList .ILIGaokao p{
+				color: #488fcf;
+			}
+			/* 英语 */
+			.ILIChinese{
+				background: linear-gradient(#f90,#f60);
+				box-shadow: 0px 0px 15px #f90;
+			}
+			.indexList .ILIChinese p{
+				color: #f60;
+			}
+			/* 英语 */
+			.ILIEnglist{
+				background: linear-gradient(#ff6c6d,#e70a52);
+				box-shadow: 0px 0px 15px #ff6c6d;
+			}
+			.indexList .ILIEnglist p{
+				color: #e70a52;
+			}
+			.indexList  .indexListItem p{
+				background: #FFFFFF;
+				width: 3rem;
+				height: 3rem;
+				border-radius: .3rem;
+				float: left;
+				margin: 1rem;
+				line-height: 3rem;
+				text-align: center;
+				font-size: 1.2rem;
+				
+				font-weight: 600;
+			}
+			.indexList  .indexListItem .p2{
+				line-height: 1.5rem;
+				padding: 1rem;
+				text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+			}
+		</style>
+	</body>
+</html>

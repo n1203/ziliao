@@ -3,50 +3,27 @@
 	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta charset="utf-8">
-		<title></title>
+		<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
 	</head>
 	<body>
+		{dede:include filename="head.htm"/}
 		<section class="list">
-			<a href="" class="listItem">
+			{dede:list pagesize="20"}
+			<a href="[field:arcurl/]" class="listItem">
 				<div class="listItemTop">
-					<span>语文</span>[0151]高中生物遗传规律知识点总结+方法综述
+					<span>[field:subject/]</span>[field:title/]
 				</div>
 				<div class="listItemBottom">
-					<small>2019-2-24</small><small>1542次下载</small>
-				</div>
-			</a><a href="" class="listItem">
-				<div class="listItemTop">
-					<span>语文</span>[0151]高中生物遗传规律知识点总结+方法综述
-				</div>
-				<div class="listItemBottom">
-					<small>2019-2-24</small><small>1542次下载</small>
-				</div>
-			</a><a href="" class="listItem">
-				<div class="listItemTop">
-					<span>语文</span>[0151]高中生物遗传规律知识点总结+方法综述
-				</div>
-				<div class="listItemBottom">
-					<small>2019-2-24</small><small>1542次下载</small>
-				</div>
-			</a><a href="" class="listItem">
-				<div class="listItemTop">
-					<span>语文</span>[0151]高中生物遗传规律知识点总结+方法综述
-				</div>
-				<div class="listItemBottom">
-					<small>2019-2-24</small><small>1542次下载</small>
-				</div>
-			</a><a href="" class="listItem">
-				<div class="listItemTop">
-					<span>语文</span>[0151]高中生物遗传规律知识点总结+方法综述
-				</div>
-				<div class="listItemBottom">
-					<small>2019-2-24</small><small>1542次下载</small>
+					<small>[field:pubdate function="GetDateMK(@me)"/]</small><small><script src="/plus/count.php?view=yes&aid=[field:id/]&mid=1" type='text/javascript' language="javascript"></script>次下载</small>
 				</div>
 			</a>
+			{/dede:list}
 		</section>
 		<style>
 			.list{
 				padding: 1rem;
+				background: #fff;
+				margin-top: 9rem;
 			}
 			.list .listItem{
 				text-decoration: none;
