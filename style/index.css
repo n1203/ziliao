@@ -1,0 +1,74 @@
+/* 
+
+首页CSS样式表文件
+
+涵盖功能模块：
+一、全局部分
+	1.全局头部header
+
+*/
+
+
+/* 全局清理 */
+*{
+	padding: 0;
+	margin: 0;
+	color: #333;
+	text-decoration: none;
+}
+body{
+	background: #f3f3f3;
+}
+
+/* 全局头部header */
+
+header{
+	width: 94%;
+	padding: 1rem 3%;
+	background: #fff;
+	float: left;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0px 0px 20px #F3F3F3;
+}
+header .headTop .headTopLeft{
+	width: 20%;
+	line-height: 4rem;
+	height: 4rem;
+	float: left;
+	text-align: center;
+}
+header .headTop .headTopLeft i{
+	color: #f60;
+	font-size: 2rem;
+}
+header .headTop a{
+	background: #e1e1e1;
+	padding: auto 5rem;
+	height: 2rem;
+	line-height: 2rem;
+	margin: 1rem 0;
+	width: 80%;
+	display: block;
+	float: left;
+	text-align: center;
+	border-radius: 100rem;	
+}
+header .hradBottom{
+	width: 94%;
+	height: 3rem;
+	line-height: 3rem;
+	float: left;
+	padding: 0 3%;
+}
+header .hradBottom .nav{
+	font-size: 1.2rem;
+	line-height: 3rem;
+	padding-right: .4rem;
+	font-weight: 550;
+}
+header .hradBottom .active{
+	color: #f60;
+}
