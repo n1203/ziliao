@@ -2,13 +2,19 @@
 		{dede:include filename="swiper.htm"/}
 		<section class="indexList">
 			<h2>最新快手资料</h2>
-			{dede:arclist row="10" orderby="pubdate"}
-<li><a href="[field:typeurl/]" title="[field:fulltitle/]" >[[field:typename/]]</a><a href="[field:arcurl /]">[field:title /]</a></li>
-{/dede:arclist}
-				<a href="" class="indexListItem ILIEnglist"><p>英语</p><div class="p2" >0043]高考英语作文：40个高级句型，用上就能拿高</div></a>
-				<a href="" class="indexListItem ILIChinese"><p>英语</p><div class="p2" >0043]高考英语作文：40个高级句型，用上就能拿高</div></a>
-				<a href="" class="indexListItem ILIGaokao"><p>英语</p><div class="p2" >0043]高考英语作文：40个高级句型，用上就能拿高</div></a>				
+
+{dede:arclist  row="10" typeid="4,5,6" titlelen="60" orderby="pubdate"}
+				<a href="[field:arcurl /]" class="indexListItem ILIEnglist"><p>英语</p><div class="p2" >[field:title /]</div></a>
+				<i id="bankuai" style="display: none;">[field:typename/]</i>
+{/dede:arclist}			
 		</section>
+		<script>
+			var dom = document.getElementById("bankuai");
+			var text = dom.innerHTML;
+			if(text == "初高中英语知识技巧"){
+				
+			}
+		</script>
 		<style type="text/css">
 			.indexList{
 				padding:.5rem 1rem;
@@ -19,7 +25,8 @@
 				margin: .5rem auto;
 				font-size: 1.2rem;
 				color: #fff;
-				text-decoration: none;				
+				text-decoration: none;	
+							width: 100%;
 			}
 			/* 高考 */
 			.ILIGaokao{
@@ -62,6 +69,7 @@
 				line-height: 1.5rem;
 				padding: 1rem;
 				text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+				color: #fff;
 			}
 		</style>
 	</body>
